@@ -1,0 +1,186 @@
+html{
+    margin-top: 0.5%;
+    background-color: #C3B1E1;
+}
+
+#loginContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.Img{
+    width: 250px;
+    height: 350px;
+    position: relative;
+    border: 1px solid gray;
+    margin: 2%;
+}
+
+#mainTxt{
+    display: none;
+    background-color: lightyellow;
+}
+
+h1{
+    text-align: center;
+}
+
+hr{
+    border-color: white;
+}
+
+footer{
+    background-color: rgb(214, 236, 255);
+    display: none;
+    text-align: center;
+}
+
+main p{
+    text-indent: 4em;
+    font-size: 18px;
+    padding: 2.5%;
+}
+
+/*Grids*/
+.gridContainer{
+    display: grid;
+}
+
+#twoGrid{
+    align-items: center;
+    text-align: center;
+}
+
+/*Image blocks*/
+#imgL, #imgR{
+    display: none;
+}
+
+/*Images*/
+.gridItem{
+    display: block;
+}
+
+#FirstsBox, #prsten, #mainImg, #hr{
+    display: none;
+}
+
+.Img:hover, .Firsts:hover{
+    border: 2px solid grey;
+}
+
+.Firsts{
+    color: white;
+    background-color: #1b1b1b;
+    border: 1px solid grey;
+    margin: 5px;
+    display: inline-block;
+}
+.Drops{
+    display: none;
+    background-color: white;
+    color: black;
+}
+#DropFirsts, #GenerateImgBtn, #GenerateAgain{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popImg{
+    width: 500px;
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    margin-top: 1%;
+}
+
+/*PopUps*/
+.popBox{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A7C7E7;
+    border: 1px solid grey;
+}
+
+#popup-img{
+    width: 700px;
+    height: 800px;
+}
+
+.popBox p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.popup-x{
+    background-color: rgb(194, 28, 28);
+}
+
+/*Media queries */
+
+/*PC*/
+@media (min-width: 799px){
+    #mainTxt{
+        width: 800px;
+    }
+    #feedback{
+        width: 600px;
+    }
+    .gridContainer{
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+    }
+    .Firsts{
+        width: 300px;
+        height: 65px;
+    }
+    #popup-txt{
+        width: 400px;
+        height: 250px;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 798px){
+    #mainTxt{
+        grid-row: 1;
+    }
+    .gridContainer{
+        grid-template-columns: auto;
+    }
+    .gridItem{
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #FirstsBox{
+        grid-row: 1;
+    }
+    #popup-txt{
+        width: 60%;
+        height: 20%;
+        z-index: -1;
+    }
+    #popup-img{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .popImg{
+        height: 70%;
+        width: 95%;
+    }
+    .Firsts{
+        width: 80%;
+    }
+}
