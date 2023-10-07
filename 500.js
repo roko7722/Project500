@@ -135,7 +135,7 @@ function popupCheck(){
         //Hvala text
     }
     else if (this.id == "future1" || this.id == "future2" || this.id == "future3"){
-        popImg.src = "Project500_Slike/Kamenje.jpg"
+        popImg.src = "";
         imgDesc.innerHTML = "Mjesto ostavljeno za buduća sjećanja.";
     }
 }
